@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing</title>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <style>
+        body {
+            background-color: black;
+            font-family: oswald-medium, oswald, sans-serif;
+            color: white;
+
+            margin: 7%;
+
+        }
+
+        label {
+            color: white;
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            color: aliceblue;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+        }
+
+        input:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        input[type=email] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            color: aliceblue;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+        }
+
+        input:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        input[type=phone] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            color: aliceblue;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+        }
+
+        input:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        textarea [type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            color: aliceblue;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+        }
+
+        textarea:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        .les {
+            width: 90%;
+            height: 70px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            color: aliceblue;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+        }
+
+        .les:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        #try[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            color: aliceblue;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+        }
+
+        #try:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        .submitbtn {
+            border: 20px solid #4797BA;
+            border-width: 10%;
+            background-color: #4797BA;
+            color: white;
+            font-size: 18px;
+
+            border-radius: 2%;
+
+        }
+
+        .submitbtn:hover {
+            border: 20px solid #75ccf1;
+            border-width: 10%;
+            background-color: #84d1f2;
+            color: white;
+            font-size: 18px;
+
+            border-radius: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:#4797BA; ">CONTACT US</h1><br>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="form" method="POST" onsubmit="return checkIfValueIsFilledInform()">
+
+        <input type=hidden name="oid" value="00DDn00000DFqx3">
+        <input type=hidden name="retURL" value="http://">
+        <!--<input type="hidden" name="debug" value=1>                             
+  <input type="hidden" name="debugEmail" value="ssoin@cybersolve.com">-->
+  <input type="hidden" name="debug" value=1>                     
+  <input type="hidden" name="debugEmail" value="ssoin@cybersolve.com">
+
+        <div style="display: flex;">
+
+
+            <div style="  width:40%;font-Size:22px;">
+
+                <div style="display: flex;">
+                    <div> <label for="first_name">First Name</label><input required="" id="first_name" maxlength="40"
+                            name="first_name" size="20" type="text"> </div>
+                    <div> <label for="last_name">Last Name</label><input required="" id="last_name" maxlength="80"
+                            name="last_name" size="20" type="text"> </div>
+
+                </div>
+                <div style="margin-top: 8%;">
+                    <label for="email">Email</label><input required id="email" maxlength="80" name="email" size="20"
+                        type="email" /><br>
+                </div>
+                <div style="margin-top: 8%;">
+                    <label for="phone">Phone</label><input required id="phone" maxlength="40" name="phone" size="20"
+                        type="text" /><br>
+                </div>
+
+
+                <br />
+
+
+                <br />
+
+
+                Select your preferred language:
+                <select style="    width: max-content;
+                height: 40px;
+                padding: 0px 15px 0px 25px;
+                border: 20px;
+                font-size: 18px;
+                border-radius: 4px;
+                "  id="00NDn00000aI8Hf" name="00NDn00000aI8Hf" title="Select your preferred language"><option value="">--None--</option><option value="English">English</option>
+                    <option value="Portuguese">Portuguese</option>
+                    </select><br><br><br>
+
+
+                <div class="form-group" id="which-visa">
+                    <label>
+                        SELECT ONE CONSULTANT
+                    </label>
+                            <br/>
+                            <input id="00NDn00000aHnEm" placeholder="--NONE--" type="search" autocomplete="off" role="combobox" id="00NDn00000aHnEm" name="00NDn00000aHnEm"
+                                title="consultant" list="options" style="    width: max-content;
+                                height: 40px;
+                                padding: 0px 15px 0px 25px;
+                                border: 20px;
+                                font-size: 18px;
+                                border-radius: 4px;
+                                ">
+                                <datalist id="options" role="listbox">
+
+                                    <option value="">--None--</option>
+                                    <option value="Consultant P">  
+                                    <option value="Consultant Q">                              
+                                    <option value="Consultant R">
+                                </datalist>
+
+                            
+
+
+                            <script>
+
+                            var consultants = document.getElementById("00NDn00000aHnEm");
+
+                            consultants.addEventListener("change", function () {
+                                // log the value of the hidden field
+                                console.log(consultants.value);
+
+                                // change retURL in this field <input type=hidden name="retURL" value="http://"> to https://calendly.com/sarangsoin416/30min
+
+                                returlfield = document.getElementsByName("retURL");
+
+                                if (consultants.value == "Consultant P") {
+                                    returlfield[0].value = "https://calendar.app.google/bHkCi5zh4mY1fef2A?";
+
+                                    console.log(returlfield[0].value);
+
+                                    // change color to white and background color to #4797BA
+                                    consultants.style.color = "white";
+                                    consultants.style.backgroundColor = "#4797BA";
+
+                                }
+                                else if (consultants.value == "") {
+                                    returlfield[0].value = "";
+
+                                    console.log(returlfield[0].value);
+
+                                    // change color to white and background color to #4797BA
+                                    consultants.style.color = "black";
+                                    consultants.style.backgroundColor = "white";
+
+                                    // make this field required
+                                    consultants.required = true;
+
+                                }
+                                else if (consultants.value == "Consultant Q") {
+                                    returlfield[0].value = "https://calendly.com/sarangsoin416/30min?";
+
+                                    console.log(returlfield[0].value);
+
+                                    // change color to white and background color to #4797BA
+                                    consultants.style.color = "white";
+                                    consultants.style.backgroundColor = "#4797BA";
+
+                                }
+                                else if (consultants.value == "Consultant R") {
+                                    returlfield[0].value = "https://calendly.com/sarangsoin416/30min?";
+
+                                    console.log(returlfield[0].value);
+
+                                    // change color to white and background color to #4797BA
+                                    consultants.style.color = "white";
+                                    consultants.style.backgroundColor = "#4797BA";
+
+                                }
+
+                            });
+
+
+                            </script>
+
+
+                    
+
+                        <!-- </div> end .wrapper -->
+
+                    <!-- </div> end .page -->
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div style="font-size:25px;margin-left:5%;margin-top:-5% ">What are you interseted in ?</div><br><br>
+            <div id="try" style=" width:40%;color:white;font-Size:22px; margin-left:-25%;margin-top:-3% ">
+                <br><br>
+                <input id="00NDn00000aHnFL" name="00NDn00000aHnFL" type="checkbox" value="1" />
+                Living Benefits<br>
+
+                
+                <input  id="00NDn00000aI3IE" name="00NDn00000aI3IE" type="checkbox" value="1" />
+                BYOB (Be Your Own Bank)<br>
+
+                <input id="00NDn00000aHnFQ" name="00NDn00000aHnFQ" type="checkbox" value="1" />
+                Tax Free Retirement<br>
+
+
+                <input id="00NDn00000aHnFV" name="00NDn00000aHnFV" type="checkbox" value="1" />
+                Mortgage Protection<br>
+                <input id="00NDn00000aHnFa" name="00NDn00000aHnFa" type="checkbox" value="1" />
+                College Planning<br>
+
+                <input id="00NDn00000aHnFf" name="00NDn00000aHnFf" type="checkbox" value="1" />
+                Business Preservation<br>
+
+                <input id="00NDn00000aHnPG" name="00NDn00000aHnPG" type="checkbox" value="1" />
+                Financial Education<br><br><br>
+
+                Referred By:
+                <br>
+                <select style="    width: 250px;
+                height: 40px;
+                font-size: large;" id="00NDn00000aHo15" name="00NDn00000aHo15" title="Referred By">
+                    <option value="">--None--</option>
+                    <option value="Event">Event</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+                <div id="anotherField" style="display: none;">
+                    
+                    <br/>
+
+                    Referral Name:<br>
+                    <input  id="00NDn00000aHzoU" maxlength="50" name="00NDn00000aHzoU" size="20" type="text" />
+                    <br>
+                </div>
+
+                <br />
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <br />
+
+        <br />
+
+
+
+        <h4 style="color:#ffffff;position:absolute;  font-size:20px;">BYOB <span style="color:#4797BA">Financial Group
+                &nbsp;
+                &nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:victorhugo@byobfg.com"
+                    style=" text-decoration: none;color:#4797BA;font-size:25px">Contact@byobfg.com</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(774)737-4217
+            &nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#4797BA">Massachusetts</span>, UNITED STATES</h4>
+
+        <br />
+
+        <br />
+
+        <br />
+
+        <br />
+
+
+
+        <div style="display: flex; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        align-content: center;
+    ">
+
+
+            <!-- // same button with different name shown on button -->
+            <input type="submit" name="submit" class="submitbtn" value="NEXT" onclick="checkIfValueIsFilledInform">
+
+            <img style="width:200px;height:120px; "
+                src="https://static.wixstatic.com/media/2475ad_b581d5607f194b7b8c8cb3952096b21b~mv2.png/v1/fill/w_402,h_189,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/BYOB%20LOGO%20FINAL%20png.png">
+
+
+        </div>
+
+    </form>
+
+
+    <!--<script>
+
+
+        // define a function to check if value is filled in before form submission
+        function checkIfValueIsFilledInform() {
+
+            // query the consultants picklist
+
+
+            // query first name field
+            var first_name = document.getElementById("first_name");
+
+            // query last name field
+            var last_name = document.getElementById("last_name");
+
+            // query email field
+            var email = document.getElementById("email");
+
+            // query phone field
+
+            var phone = document.getElementById("phone");
+
+            // if none of them is empty
+            if (first_name.value != "" && last_name.value != "" && email.value != "" && phone.value != "") {
+
+                // submit the form
+                //form.submit();
+
+                returlfield = document.getElementsByName("retURL");
+
+                // change name from the return url
+                var url = returlfield[0].value;
+
+                // if &name= is not present in the url, then add it
+                if (url.indexOf("&name=") == -1) {
+                    var url = url + "&name=" + first_name.value + "%20" + last_name.value;
+                } else {
+                    var url = url.replace(/&name=.*$/, "&name=" + first_name.value + "%20" + last_name.value);
+                }
+
+                // now update the return url value in the field
+                returlfield[0].value = url;
+
+                // change name from the return url
+                var url = returlfield[0].value;
+
+                // if &email is not present in the url, then add it
+                if (url.indexOf("&email=") == -1) {
+                    var url = url + "&email=" + email.value;
+                } else {
+                    var url = url.replace(/&email=.*$/, "&email=" + email.value);
+                }
+
+                // now update the return url value in the field
+                returlfield[0].value = url;
+
+
+                // change phone from the return url
+                var url = returlfield[0].value;
+
+                // if &email is not present in the url, then add it
+                if (url.indexOf("&phone=") == -1) {
+                    var url = url + "&phone=" + phone.value;
+                } else {
+                    var url = url.replace(/&phone=.*$/, "&phone=" + phone.value);
+                }
+
+                // now update the return url value in the field
+                returlfield[0].value = url;
+
+                // log the return url
+                console.log("return url");
+                console.log(returlfield[0].value);
+
+                // log as alert
+                alert(returlfield[0].value);
+
+                // Submit the form programmatically
+                event.target.submit();
+
+                form.submit();
+
+
+            }
+
+
+        }
+
+    </script>-->
+    <!--referal script-->
+    <script>
+        var picklist = document.getElementById("00NDn00000aHo15");
+        var FieldToShow = document.getElementById("anotherField");
+
+        picklist.addEventListener("change", function () {
+            if (picklist.value === "Other") {
+                anotherField.style.display = "block";
+            } else {
+                anotherField.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
